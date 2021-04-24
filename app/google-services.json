@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "808186336125",
+    "project_id": "chattingvideo-b5c4d",
+    "storage_bucket": "chattingvideo-b5c4d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:808186336125:android:619a915d5c3df217d43214",
+        "android_client_info": {
+          "package_name": "com.example.chatting_video"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "808186336125-g1buuispkot00dha7fidi9fl660mu71f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbsqjMBvNHkJyGwDA-9kvnVDrUXz2HDgo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "808186336125-g1buuispkot00dha7fidi9fl660mu71f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
