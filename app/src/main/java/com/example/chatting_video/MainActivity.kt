@@ -52,10 +52,10 @@ class MainActivity : AppCompatActivity() {
                                     Log.d(TAG, "실패")
                                 }
 
-//                        var intent = Intent(this, ChatListActivity::class.java)
-//                        //새화면으로 이동하면 전 액티비티를 없애기 위해
-//                        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-//                        startActivity(intent)
+                        var intent = Intent(this, ChatListActivity::class.java)
+                        //새화면으로 이동하면 전 액티비티를 없애기 위해
+                        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                        startActivity(intent)
 
                     } else {
 

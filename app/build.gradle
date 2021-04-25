@@ -65,4 +65,9 @@ dependencies {
 
     //multidex
     implementation 'com.android.support:multidex:1.0.3'
+
+    //리사이클러뷰 어댑터를 안만들어도 되려고..
+    implementation "com.xwray:groupie:2.7.0"
+
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
 }
