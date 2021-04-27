@@ -4,10 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import com.example.chatting_video.Model.UserItem
+import com.example.chatting_video.Adapter.UserItem
 import com.example.chatting_video.databinding.ActivityChatListBinding
-import com.example.chatting_video.databinding.ActivityLoginBinding
-import com.example.chatting_video.databinding.ActivityMainBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.xwray.groupie.GroupAdapter
@@ -38,7 +36,7 @@ class ChatListActivity : AppCompatActivity() {
 //                        Log.d(TAG, "${document.id} => ${document.data}")
 //                        Log.d(TAG, "${document.get("username").toString()}")
 
-                    adapter.add(UserItem(document.get("username").toString()))
+                    adapter.add(UserItem(document.get("username").toString(), document.get("uid").toString()))
                     }
                 }
                 .addOnFailureListener { exception ->
@@ -47,7 +45,16 @@ class ChatListActivity : AppCompatActivity() {
 
         adapter.setOnItemClickListener { item, view ->
 
+//            Log.d(TAG, (item as UserItem).name)
+//            Log.d(TAG, (item as UserItem).uid)
+
+            val uid: String = (item as UserItem).uid
+            val name: String = (item as UserItem).name
+
             val intent = Intent(this, ChatRoomActivity::class.java)
+
+            intent.putExtra("yourUid", uid)
+            intent.putExtra("name", name)
             startActivity(intent)
         }
 
