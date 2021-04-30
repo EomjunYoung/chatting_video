@@ -24,8 +24,8 @@ class MainActivity : AppCompatActivity() {
         _binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        //test
         auth = FirebaseAuth.getInstance()
-
 
         binding.loginButtonMain.setOnClickListener{
 
