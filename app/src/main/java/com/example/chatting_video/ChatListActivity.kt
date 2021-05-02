@@ -26,9 +26,15 @@ class ChatListActivity : AppCompatActivity() {
         _binding = ActivityChatListBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.myChatList.setOnClickListener{
+            val intent = Intent(this, MyRoomActivity::class.java)
+            startActivity(intent)
+        }
+
         val adapter = GroupAdapter<GroupieViewHolder>()
         binding.recyclerviewList.adapter = adapter
 
+        //db.collection.get은 Firebase에서 db를 가지고 오는 것
         db.collection("users")
                 .get()
                 .addOnSuccessListener { result ->

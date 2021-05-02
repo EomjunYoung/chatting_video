@@ -9,7 +9,6 @@
     android:layout_height="80dp">
 
     <TextView
-        android:id="@+id/textView2"
         android:layout_margin="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -18,7 +17,7 @@
         tools:layout_editor_absoluteY="96dp" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/left_chat"
         android:layout_margin="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
