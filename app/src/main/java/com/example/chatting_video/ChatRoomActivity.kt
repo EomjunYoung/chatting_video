@@ -128,6 +128,10 @@ class ChatRoomActivity : AppCompatActivity() {
         }
         binding.recyclerViewChat.adapter = adapter 
         readRef.addChildEventListener(childEventListener)
+
+        val myRef_list = database.getReference("message-user-list")
+
+
         binding.button.setOnClickListener {
 
             val message: String = binding.editText.text.toString()
@@ -140,6 +144,7 @@ class ChatRoomActivity : AppCompatActivity() {
             val chat_get = ChatNewModel(yourUid.toString(), myUid.toString(), message, System.currentTimeMillis(), "you")
             myRef.child(yourUid.toString()).child(myUid.toString()).push().setValue(chat_get)
 
+            myRef_list.child(myUid.toString()).child(yourUid.toString()).setValue(chat)
             binding.editText.setText("")// 메시지를 보낸다음에는 초기화
 
         /**
