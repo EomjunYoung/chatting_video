@@ -17,6 +17,8 @@ import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
+
+//test
 class MainActivity : AppCompatActivity() {
 
     private var _binding: ActivityMainBinding? = null
